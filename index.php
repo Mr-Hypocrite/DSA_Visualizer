@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            Sorting Visualizer
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="./assets/css/styles.css">
+    </head>
+    <body>
+        <h1 >SORTING VISUALIZER</h1>
+            <form class="visual_options">
+                
+                    <div class="left">
+                        <input type="button" id="new" class="btn btn-outline-success " value="New Array">
+                        <span>
+                            <label>Number of bars</label><input id="number" type="range"  min=5 max=60 step="1" value="60">
+                            <label>Speed</label><input id="speed" type="range"  min="20" max="900" step="20" value="20">
+                        </span> 
+                    </div>
+                    <div class="right">
+                        <input type="button" id="bubble" class="btn btn-outline-info "  value="Bubble Sort">
+                        <input type="button" id="select" class="btn btn-outline-info"value="Selection Sort">
+                        <input type="button" id="insert"class="btn btn-outline-info" value="Insertion Sort">
+                        <input type="button" id="quick" class="btn btn-outline-info"value="Quick Sort">
+                        <input type="button" id="merge"class="btn btn-outline-info " value="Merge Sort">
+                    </div>
+               
+            </form>
+
+            <div class="center">
+                <div id="array"></div>
+            </div>
+
+            <script src="./assets/js/index.js" type="module"></script>
+
+    </body>
+</html>
