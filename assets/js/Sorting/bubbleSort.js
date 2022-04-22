@@ -1,4 +1,4 @@
-const bubble = async (sleep, delay, swap) => {
+const bubble = async () => {
     const ele = document.querySelectorAll(`.block`)
 
     for (let i = 0; i < ele.length-1; i++) {
@@ -25,5 +25,4 @@ const bubble = async (sleep, delay, swap) => {
     ele[0].style.background = `green`
 }
 
-export default bubble
-// document.getElementById(`bubble`).addEventListener(`click`, () => bubble())
+document.getElementById(`bubble`).addEventListener(`click`, () => bubble())

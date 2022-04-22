@@ -31,5 +31,3 @@ const insert = async (sleep, delay) => {
          b[i].style.background = `green`
     }
 }
-
-export default insert

@@ -1,6 +1,3 @@
-// Importing sorting functions
-import bubble from "./Sorting/bubbleSort.js"
-import insert from "./Sorting/insertionSort.js"
 // Global Vars
 let screenWidth = window.innerWidth
 let container = document.getElementById(`array`)
@@ -69,7 +66,7 @@ const swap = (el1, el2) => {
     
 }
 
-// Sleep/Delay Function
+// Sleep Function
 const sleep = (millisec) => { 
     return new Promise(resolve => { 
         setTimeout(() => { resolve(``) }, millisec);
@@ -82,6 +79,3 @@ let delayTime = document.querySelector(`#speed`)
 delayTime.addEventListener(`input`, () => {
     delay = parseInt(1000 - delayTime.value)
 })
-
-document.getElementById(`bubble`).addEventListener(`click`, () => bubble(sleep, delay, swap))
-document.getElementById(`insert`).addEventListener(`click`, () => { insert(sleep, delay) })

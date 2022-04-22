@@ -31,7 +31,9 @@
                 <div id="array"></div>
             </div>
 
-            <script src="./assets/js/index.js" type="module"></script>
+            <script src="./assets/js/index.js"></script>
+            <script src="./assets/js/Sorting/bubbleSort.js"></script>
+            <script src="./assets/js/Sorting/insertionSort.js"></script>
 
     </body>
 </html>
