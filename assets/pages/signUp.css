@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.signUp__div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 50%;
+    margin: auto;
+    height: 100vh;
+    justify-content: center;
+}
+
+.signUp__div .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sq_div {
+    margin: 1rem 0;
+}
+
+.signUp__div input {
+    border: none;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 2px;
+}
+
+.signUp__div input:focus {
+    outline: none;
+}
+
+.signUp__div .form_btns {
+    display: flex;
+    gap: 2rem;
+    margin: 0 auto;
+}

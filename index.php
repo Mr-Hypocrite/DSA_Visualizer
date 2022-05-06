@@ -7,6 +7,13 @@
         <link rel="stylesheet" href="./assets/css/styles.css">
     </head>
     <body>
+
+        <?php 
+            $dir = $_SERVER['DOCUMENT_ROOT'];
+        ?>
+
+        <?php include $dir.'/assets/components/navbar/navbar.php' ?>
+
         <h1 >SORTING VISUALIZER</h1>
             <form class="visual_options">
                 
@@ -18,11 +25,11 @@
                         </span> 
                     </div>
                     <div class="right">
-                        <input type="button" id="bubble" class="btn btn-outline-info "  value="Bubble Sort">
-                        <input type="button" id="select" class="btn btn-outline-info"value="Selection Sort">
-                        <input type="button" id="insert"class="btn btn-outline-info" value="Insertion Sort">
-                        <input type="button" id="quick" class="btn btn-outline-info"value="Quick Sort">
-                        <input type="button" id="merge"class="btn btn-outline-info " value="Merge Sort">
+                        <input type="button" id="bubble" class="btn btn-outline-info sort-btn"  value="Bubble Sort">
+                        <input type="button" id="select" class="btn btn-outline-info sort-btn"value="Selection Sort">
+                        <input type="button" id="insert"class="btn btn-outline-info sort-btn" value="Insertion Sort">
+                        <input type="button" id="quick" class="btn btn-outline-info sort-btn"value="Quick Sort">
+                        <input type="button" id="merge"class="btn btn-outline-info sort-btn" value="Merge Sort">
                     </div>
                
             </form>

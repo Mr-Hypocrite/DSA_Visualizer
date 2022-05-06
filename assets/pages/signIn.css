@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.signIn__div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 50%;
+    margin: auto;
+    height: 100vh;
+    justify-content: center;
+}
+
+.signIn__div p {
+    text-align: center;
+}
+
+.signIn__div .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signIn__div input {
+    border: none;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 2px;
+}
+
+.signIn__div input:focus {
+    outline: none;
+}
+
+.signIn__div .form_btns {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+}

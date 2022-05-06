@@ -4,6 +4,7 @@ let container = document.getElementById(`array`)
 let outerContainer = document.querySelector(`.center`)
 let width, noOfBars, padding
 let arraySize = document.querySelector(`#number`)
+let sortBtns = Array.from(document.getElementsByClassName('sort-btn'))
 
 width = (screenWidth * 0.8) / 60
 
@@ -35,6 +36,10 @@ const generatearray = (noOfBars = 60) => {
 		container.appendChild(array)
 		document.querySelector(`.center`).style.padding = `0 ${ padding }px`
 	}
+
+	sortBtns.forEach(element => {
+        element.disabled = false
+    })
 }
 
 // Generating Array on Load
@@ -79,3 +84,8 @@ let delayTime = document.querySelector(`#speed`)
 delayTime.addEventListener(`input`, () => {
     delay = parseInt(1000 - delayTime.value)
 })
+
+
+const disablebtn = () => {
+	document.getElementById('bubble').disabled = true
+}

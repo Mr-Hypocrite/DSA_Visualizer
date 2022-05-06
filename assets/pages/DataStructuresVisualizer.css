@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #112B3C;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.title {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.dataSizeInput {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.optionPane {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.DsOptionPane {
+    display: flex;
+    gap: 2rem;
+}
+
+.DsOptionPane input {
+    background-color: #112B3C;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    width: 5rem;
+    padding: 0.2rem;
+}
+
+.DsOptionPane input:focus {
+    outline: none
+}
+
+.DsOptionPane .flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.dataInDS {
+    font-weight: 400;
+}
+
+.baseAdd {
+    position: absolute;
+    bottom: -1.5rem;
+}
+
+.arrIndex {
+    position: absolute;
+    top: -1.5rem;
+}
+
+.arrayElement {
+    align-items: center;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem 1rem;
+    position: relative;
+    width: fit-content;
+}
+
+.arrayContainer {
+    display: flex;
+}
+
+.LLNode {
+    display: flex;
+}
+
+.canvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: auto;
+    gap: 2rem;
+    min-height: 40vh;
+}
+
+#DSContainer {
+    margin: 3rem 4rem 0;
+    display: flex;
+}
+
+#ds {
+    background-color: #112B3C;
+    color: #EFEFEF;
+}

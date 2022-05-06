@@ -1,8 +1,12 @@
-const insert = async (sleep, delay) => {
+const insertion = async () => {
+
+    sortBtns.forEach(element => {
+        element.disabled = true
+    })
+
     const b = document.querySelectorAll(`.block`)
     // placing first bar in sorted list
     b[0].style.background = `green`
-    console.log("insertion");
     // total no. of bars
     let n = b.length
 
@@ -30,4 +34,12 @@ const insert = async (sleep, delay) => {
         }
          b[i].style.background = `green`
     }
+
+    sortBtns.forEach(element => {
+        element.disabled = false
+    })
 }
+
+document.getElementById(`insert`).addEventListener(`click`, () => {
+    insertion()
+})

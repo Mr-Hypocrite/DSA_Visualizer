@@ -36,13 +36,13 @@ label{
     color: #fff;
     font-size: 1rem;
     position: absolute;
-    top: -25;
+    top: -25px;
     right: 0;
     left: 0;
 }
 
 .center {
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 
 #array {

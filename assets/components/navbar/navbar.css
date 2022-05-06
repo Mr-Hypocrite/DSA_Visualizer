@@ -1,0 +1,7 @@
+.nav__bar {
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
+}

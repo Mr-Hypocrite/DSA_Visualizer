@@ -1,4 +1,9 @@
 const bubble = async () => {
+
+    sortBtns.forEach(element => {
+        element.disabled = true
+    })
+
     const ele = document.querySelectorAll(`.block`)
 
     for (let i = 0; i < ele.length-1; i++) {
@@ -23,6 +28,12 @@ const bubble = async () => {
         ele[ele.length - 1 - i].style.background = `green`
     }
     ele[0].style.background = `green`
+
+    sortBtns.forEach(element => {
+        element.disabled = false
+    })
 }
 
-document.getElementById(`bubble`).addEventListener(`click`, () => bubble())
+document.getElementById(`bubble`).addEventListener(`click`, () => {
+    bubble()
+})
