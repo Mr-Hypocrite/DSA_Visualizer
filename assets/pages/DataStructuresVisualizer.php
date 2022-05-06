@@ -35,9 +35,7 @@
 
     </div>
 
-    <div class="canvas">
-
-        <div class="DsOptionPane">
+    <div class="DsOptionPane">
             <div class='flex'>
                 <h3>Data:</h3>
                 <input class='newData' type="text">
@@ -47,7 +45,9 @@
 
             <button class='popFunc'>Pop</button>
             
-        </div>    
+        </div>  
+
+    <div class="canvas">  
 
         <div id="DSContainer">
 

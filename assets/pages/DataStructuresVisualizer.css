@@ -33,6 +33,8 @@ body {
 .DsOptionPane {
     display: flex;
     gap: 2rem;
+    width: fit-content;
+    margin: auto;
 }
 
 .DsOptionPane input {
@@ -86,22 +88,36 @@ body {
 }
 
 .canvas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     max-width: 1200px;
     margin: auto;
-    gap: 2rem;
     min-height: 40vh;
+    overflow-x: auto;
+    position: relative;
 }
 
 #DSContainer {
-    margin: 3rem 4rem 0;
-    display: flex;
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    right: 0;
 }
 
 #ds {
     background-color: #112B3C;
     color: #EFEFEF;
 }
+
+@media only screen and (max-width: 1200px) {
+    .canvas {
+        max-width: 90%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .optionPane {
+        flex-direction: column;
+        width: fit-content;
+        gap: 1rem;
+    }
+}
+

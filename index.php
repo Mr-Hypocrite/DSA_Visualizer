@@ -20,7 +20,7 @@
                     <div class="left">
                         <input type="button" id="new" class="btn btn-outline-success " value="New Array">
                         <span>
-                            <label>Number of bars</label><input id="number" type="range"  min=5 max=60 step="1" value="60">
+                            <label>Number of bars</label><input id="number" type="range"  min=5 max=50 step="1" value="60">
                             <label>Speed</label><input id="speed" type="range"  min="20" max="900" step="20" value="20">
                         </span> 
                     </div>

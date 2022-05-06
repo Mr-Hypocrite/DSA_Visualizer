@@ -12,7 +12,6 @@ const createDataSet = () => {
         dataSet.push(Math.round(Math.random() * 100))
         LLData.push(Math.round(Math.random() * 10000))
     }
-    console.log(LLData)
 }
 
 const createArray = () => {
@@ -46,6 +45,7 @@ const createLL = () => {
         eleContainer.appendChild(ele2)
         container.appendChild(eleContainer)
     }
+
 }
 
 const clearDataSet = () => {
@@ -97,7 +97,8 @@ const pushFunc = () => {
     let newData = document.querySelector(`.newData`).value
     let max = document.querySelectorAll(`.arrayElement`).length
 
-    if (newData !== null || newData.length < 0) {
+    if (!newData) {
+        console.log(newData)
         alert(`Cannot push empty data element`)
     } else {
         if (max < 25)
@@ -106,7 +107,7 @@ const pushFunc = () => {
             ele.innerHTML = `<h3 class = 'dataInDS'>${ newData }</h3> <h6 class = 'baseAdd'>${ 1000 + max }<h6> <h6 class = 'arrIndex'>${ max }<h6>`
             ele.classList.add(`arrayElement`)
             let oldData = document.querySelectorAll(`.arrayElement`)
-            clearArray()
+            clearDataSet()
             oldData.forEach(node => {
                 container.appendChild(node)
             })

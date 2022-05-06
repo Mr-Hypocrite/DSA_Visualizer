@@ -18,10 +18,11 @@
 
     <?php 
         $dir = $_SERVER['DOCUMENT_ROOT'];
+        $dsPage = $dir.'./assets/pages/DataStructuresVisualizer.php'
     ?>
 
     <div class='nav__bar'>
-        <a href='./assets/pages/DataStructuresVisualizer.php'>
+        <a href="../../assets/pages/DataStructuresVisualizer.php">
             <h3>Data Structures</h3>
         </a>
         <a href="../../index.php">

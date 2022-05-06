@@ -6,18 +6,20 @@ let width, noOfBars, padding
 let arraySize = document.querySelector(`#number`)
 let sortBtns = Array.from(document.getElementsByClassName('sort-btn'))
 
-width = (screenWidth * 0.8) / 60
+screenWidth > 1024 ? width = (screenWidth * 0.8) / 50 : width = (screenWidth * 0.6) / 50
+
 
 //Scaling the array size according to the `Number of bars` slider
 arraySize.addEventListener(`input`, () => {
 	noOfBars = parseInt(arraySize.value)
-	width = (screenWidth * 0.8) / arraySize.value
+	screenWidth > 1024 ? width = (screenWidth * 0.8) / arraySize.value : width = (screenWidth * 0.6) / arraySize.value
+	console.log(screenWidth, width, arraySize.value)
     removeBars()
 	generatearray(parseInt(arraySize.value))
 });
 
 //Function to generate random arrays and display them
-const generatearray = (noOfBars = 60) => {
+const generatearray = (noOfBars = 50) => {
 
 	for (let i = 0; i < noOfBars; i++)
 	{
