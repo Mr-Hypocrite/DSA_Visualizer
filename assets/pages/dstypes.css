@@ -71,6 +71,37 @@ img {
     width: 40% ;
 }
 
+.linkedl {
+    display: block;
+    margin: 0 auto;
+    width: 60% ;
+}
+
+.stack {
+    display: block;
+    margin: 0 auto;
+    width: 60% ;
+}
+
+.queue {
+    display: block;
+    margin: 0 auto;
+    width: 70% ;
+}
+
+.tree {
+    display: block;
+    margin: 0 auto;
+    width: 70% ;
+}
+
+.graph {
+    display: block;
+    margin: 0 auto;
+    width: 60% ;
+}
+
+
 /* tablet */
 
 @media only screen and (max-width: 900px) {
@@ -84,14 +115,26 @@ img {
         grid-template-columns: 1fr;
         gap: 5px;
     }
-    .algo img {
-        margin: 0;
+    .diagram {
+        width: 100%;
     }
-    .need img {
+    .array {
+        width: 80%;
+    }
+    .linkedl {
         width: 90%;
     }
-    .adv img {
-        width: 40%;
+    .stack {
+        width: 80%;
+    }
+    .queue {
+        width: 90%;
+    }
+    .tree {
+        width: 80%;
+    }
+    .graph {
+        width: 90%;
     }
 }
 
@@ -104,11 +147,5 @@ img {
     p, li {
         font-size: 10px;
         padding: 0;
-    }
-    .need img {
-        width: 90%;
-    }
-    .adv img {
-        width: 40%;
     }
 }
