@@ -187,6 +187,104 @@ document.querySelector(`.popFunc`).addEventListener(`click`, () => {
 })
 
 document.querySelector(`.pushFunc`).addEventListener(`click`, () => {
+    Array-Functions
+    pushFunc()
+})
+
+const search = () => {
+    let element = document.getElementById("DSContainer").childNodes
+    let srchData=document.querySelector(`.srchData`).value
+    let flag=0
+    console.log(srchData)
+        for (let i = 0; i < dataSetSize; i++)
+        {
+           
+            if(dataSet[i]==srchData){
+            element[i+1].style.backgroundColor = "green";
+            flag=1
+            }
+        }
+    
+    if(flag==0)
+        alert("Not Found")
+}
+
+
+document.querySelector(`.search`).addEventListener(`click`, () => {
+    console.log(dataSet)
+    
+    clearDataSet() 
+    createArray()
+    search()
+})
+
+
+const remove = () =>{
+    flag=0
+    let rmvData=document.querySelector(`.rmvData`).value
+    for (let i = 0; i < dataSetSize; i++)
+    {
+        
+        if(rmvData==dataSet[i])
+        {
+            clearDataSet()
+            console.log("Found")
+            index=i
+            flag=1
+        }
+        
+    }
+    if(flag==0)
+        alert("Element Not Found")
+    if(flag==1)
+    {
+        for (let i = 0; i < dataSetSize; i++)
+        {
+            if(i==index){
+                dataSetSize--
+            dataSet.splice(i,1)}
+            if(dataSet[i]!=undefined){
+            let ele = document.createElement(`div`)
+            ele.innerHTML = `<h3 class = 'dataInDS'>${ dataSet[i] }</h3> <h6 class = 'baseAdd'>${ 1000 + i }</h6> <h6 class = 'arrIndex'>${ i }</h6>`
+            ele.classList.add(`arrayElement`)
+            container.appendChild(ele)}
+        }
+    }
+ 
+}
+
+
+document.querySelector(`.remove`).addEventListener(`click`, () => {
+
+    remove()
+
+})
+
+const insert = () =>{
+    clearDataSet()
+    let inData=document.querySelector(`.data`).value
+    let inIndex=document.querySelector(`.index`).value
+    for (let i = 0; i <dataSetSize; i++) {
+        let ele = document.createElement(`div`)
+        if(i==inIndex)
+        {
+            dataSetSize++
+            dataSet.splice(inIndex,0,inData)
+        }   
+
+            ele.innerHTML = `<h3 class = 'dataInDS'>${dataSet[i] }</h3> <h6 class = 'baseAdd'>${ 1000 + i }</h6> <h6 class = 'arrIndex'>${ i }</h6>`
+            ele.classList.add(`arrayElement`)
+            container.appendChild(ele)
+    }
+
+
+}
+
+
+
+document.querySelector(`.insert`).addEventListener(`click`, () => {
+    insert()
+})
     switch (ds) {
         case `Stack`: pushStackFunc()
             break;

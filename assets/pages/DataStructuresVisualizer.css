@@ -80,6 +80,17 @@ body {
     width: fit-content;
 }
 
+.elementFound{
+    align-items: center;
+    border: 1px solid rgb(0, 255, 21);
+    background-color: rgb(36, 173, 48);
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem 1rem;
+    position: relative;
+    width: fit-content;
+}
+
 .arrayContainer {
     display: flex;
 }

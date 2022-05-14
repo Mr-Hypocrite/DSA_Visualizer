@@ -45,9 +45,21 @@
 
             <button class='btn pushFunc'>Push</button>
 
+            <button class='popFunc'>Pop</button>
+
+            <input class='data' type="text" placeholder="Element">
+            <input class='index' type="text" placeholder="Index">
+            <button class='insert'>Insert:</button>
+
+            <input class='rmvData' type="text">
+            <button class='remove'>Remove:</button>
+
+            <input class='srchData' type="text">
+            <button class='search'>Search:</button>
+
             <button class='btn popFunc'>Pop</button>
             
-        </div>  
+    </div>  
 
     <div class="canvas">  
 
