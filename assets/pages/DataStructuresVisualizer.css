@@ -19,6 +19,7 @@ body {
 
 .dataSizeInput {
     display: flex;
+    align-items: center;
     gap: 0.5rem;
 }
 
@@ -83,16 +84,101 @@ body {
     display: flex;
 }
 
+.stackContainer {
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 4px;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin: auto;
+    padding: 0 0.4rem 0.4rem;
+    width: fit-content;
+}
+
 .LLNode {
     display: flex;
 }
 
+.llArrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+}
+
+.sData {
+    background-color: #BDE6F1;
+    border-bottom: 1px solid #16003B;
+    border-radius: 4px;
+    color: #16003B;
+    font-size: 1.5rem;
+    width: 20rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.sData::-webkit-scrollbar {
+    height: 5px;
+  }
+.sData::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.sData::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.sData::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #112B3C;
+}
+
+.dsSelector {
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0.4rem;
+}
+
+.dsSelector option {
+    cursor: pointer;
+}
+
+
 .canvas {
     max-width: 1200px;
-    margin: auto;
+    margin: 2rem auto;
     min-height: 40vh;
     overflow-x: auto;
     position: relative;
+}
+
+.canvas::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+.canvas::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.canvas::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.canvas::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 #DSContainer {
@@ -120,4 +206,3 @@ body {
         gap: 1rem;
     }
 }
-

@@ -19,16 +19,18 @@
 
     <div class="optionPane">
 
-        <button id="op1" >New DataSet</button>
+        <button id="op1" class="btn">New DataSet</button>
 
         <div class='dataSizeInput'>
             <h4>Data Set Size: </h4>
             <input type="range" min="1" max="25" value="10" class="slider" id="Size">
         </div>
 
-        <select name="dataStructures" id="ds">
+        <select name="dataStructures" id="ds" class="dsSelector">
             <option value="Array">Array</option>
             <option value="LinkedList">LinkedList</option>
+            <option value="Stack">Stack</option>
+            <option value="Queue">Queue</option>
             <option value="Tree">Tree</option>
             <option value="Graph">Graph</option>
         </select>
@@ -41,9 +43,9 @@
                 <input class='newData' type="text">
             </div>
 
-            <button class='pushFunc'>Push</button>
+            <button class='btn pushFunc'>Push</button>
 
-            <button class='popFunc'>Pop</button>
+            <button class='btn popFunc'>Pop</button>
             
         </div>  
 

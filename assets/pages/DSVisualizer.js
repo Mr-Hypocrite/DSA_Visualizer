@@ -16,26 +16,60 @@ const createDataSet = () => {
 
 const createArray = () => {
 
+    document.getElementById(`DSContainer`).style.top = `10rem`
+
     clearDataSet()
+    let arrayContainer = document.createElement(`div`)
+    arrayContainer.classList.add(`arrayContainer`)
+    arrayContainer.classList.add(`arrayElements`)
 
     for (let i = 0; i < dataSetSize; i++) {
         let ele = document.createElement(`div`)
         ele.innerHTML = `<h3 class = 'dataInDS'>${ dataSet[i] }</h3> <h6 class = 'baseAdd'>${ 1000 + i }</h6> <h6 class = 'arrIndex'>${ i }</h6>`
         ele.classList.add(`arrayElement`)
-        container.appendChild(ele)
+        ele.classList.add(`arrayElements`)
+        arrayContainer.appendChild(ele)
     }
 
-    container.classList.add(`arrayContainer`)
+    container.appendChild(arrayContainer)
+}
+
+const createStack = () => {
+    
+    clearDataSet()
+    let stackContainer = document.createElement(`div`)
+    document.getElementById(`DSContainer`).style.top = `5rem`
+    stackContainer.classList.add(`stackContainer`)
+    stackContainer.classList.add(`stackElements`)
+
+    for (let i = 0; i < dataSetSize; i++) {
+
+        let stackEle = document.createElement(`div`)
+        stackEle.classList.add(`stackEle`)
+        stackEle.classList.add(`stackElements`)
+
+        stackEle.innerHTML = `<div class="sData">${ dataSet[i] }</div>`
+        stackContainer.appendChild(stackEle)
+    }
+
+    container.appendChild(stackContainer)
+
 }
 
 const createLL = () => {
 
     clearDataSet()
+    let arrayContainer = document.createElement(`div`)
+    arrayContainer.classList.add(`arrayContainer`)
+    arrayContainer.classList.add(`arrayElements`)
 
     for (let i = 0; i < dataSetSize; i++) {
         let eleContainer = document.createElement(`div`)
         let ele1 = document.createElement(`div`)
         let ele2 = document.createElement(`div`)
+        let arrow = document.createElement(`div`)
+        arrow.classList.add(`llArrow`)
+        arrow.innerHTML = `---->`
         ele1.innerHTML = `<h3 class = 'dataInDS'>${ dataSet[i] }</h3> <h6 class = 'baseAdd'>${ LLData[i] }</h6>`
         ele2.innerHTML = `<h3 class = 'dataInDS'>${ LLData[i+1] }</h3> <h6 class = 'arrIndex'>NextAdd</h6>`
         ele1.classList.add(`arrayElement`)
@@ -43,13 +77,24 @@ const createLL = () => {
         eleContainer.classList.add(`LLNode`)
         eleContainer.appendChild(ele1)
         eleContainer.appendChild(ele2)
-        container.appendChild(eleContainer)
+        eleContainer.appendChild(arrow)
+        arrayContainer.appendChild(eleContainer)
     }
+
+    container.appendChild(arrayContainer)
 
 }
 
 const clearDataSet = () => {
-    document.querySelectorAll(`.arrayElement`).forEach(node => {
+    document.querySelectorAll(`.arrayElements`).forEach(node => {
+        node.remove()
+    })
+
+    document.querySelectorAll(`.llArrow`).forEach(node => {
+        node.remove()
+    })
+
+    document.querySelectorAll(`.stackElements`).forEach(node => {
         node.remove()
     })
 }
@@ -71,6 +116,12 @@ const callCurrentDS = () => {
 
         case `LinkedList`: createLL()
             break;
+
+        case `Stack`: createStack()
+            break;
+
+        case `Queue`: createLL()
+            break;
     
         case `Tree`: createTree()
             break;
@@ -89,33 +140,33 @@ document.getElementById(`Size`).addEventListener(`input`, (e) => {
     callCurrentDS()
 })
 
-const popFunc = () => {
-    document.querySelectorAll(`.arrayElement`)[document.querySelectorAll(`.arrayElement`).length - 1].remove()
+const popStackFunc = () => {
+    document.querySelectorAll(`.stackEle`)[0].remove()
 }
 
-const pushFunc = () => {
+const pushStackFunc = () => {
     let newData = document.querySelector(`.newData`).value
     let max = document.querySelectorAll(`.arrayElement`).length
+    let stackContainer = document.createElement(`div`)
 
     if (!newData) {
         console.log(newData)
         alert(`Cannot push empty data element`)
     } else {
-        if (max < 25)
-        {   
-            let ele = document.createElement(`div`)
-            ele.innerHTML = `<h3 class = 'dataInDS'>${ newData }</h3> <h6 class = 'baseAdd'>${ 1000 + max }<h6> <h6 class = 'arrIndex'>${ max }<h6>`
-            ele.classList.add(`arrayElement`)
-            let oldData = document.querySelectorAll(`.arrayElement`)
-            clearDataSet()
-            oldData.forEach(node => {
-                container.appendChild(node)
-            })
-            container.appendChild(ele)
-        } else {
-            alert(`Max 25 elements allowed, please clear some elements to add`)
-        }
-    }    
+        let oldData = document.querySelectorAll(`.stackEle`)
+        clearDataSet()
+        stackContainer.classList.add(`stackContainer`)
+        stackContainer.classList.add(`stackElements`)
+
+        let stackEle = document.createElement(`div`)
+        stackEle.classList.add(`stackEle`)
+        stackEle.classList.add(`stackElements`)
+
+        stackEle.innerHTML = `<div class="sData">${ newData }</div>`
+        stackContainer.appendChild(stackEle)
+        oldData.forEach(data => stackContainer.appendChild(data))
+    }
+    container.appendChild(stackContainer)
 }
 
 document.getElementById(`op1`).addEventListener(`click`,() => {
@@ -124,9 +175,25 @@ document.getElementById(`op1`).addEventListener(`click`,() => {
 })
 
 document.querySelector(`.popFunc`).addEventListener(`click`, () => {
-    popFunc()
+    switch (ds) {
+        case `Stack`: popStackFunc()
+            break;
+        case `Queue`: popQueueFunc()
+            break;
+    
+        default:
+            break;
+    }
 })
 
 document.querySelector(`.pushFunc`).addEventListener(`click`, () => {
-    pushFunc()
+    switch (ds) {
+        case `Stack`: pushStackFunc()
+            break;
+        case `Queue`: pushQueueFunc()
+            break;
+    
+        default:
+            break;
+    }
 })

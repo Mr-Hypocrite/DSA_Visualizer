@@ -1,8 +1,12 @@
+let bubbleBtn = document.getElementById(`bubble`)
+
 const bubble = async () => {
 
     sortBtns.forEach(element => {
         element.disabled = true
     })
+
+    bubbleBtn.classList.add(`active-btn`)
 
     const ele = document.querySelectorAll(`.block`)
 
@@ -32,8 +36,11 @@ const bubble = async () => {
     sortBtns.forEach(element => {
         element.disabled = false
     })
+    
+    bubbleBtn.classList.remove(`active-btn`)
+
 }
 
-document.getElementById(`bubble`).addEventListener(`click`, () => {
+bubbleBtn.addEventListener(`click`, () => {
     bubble()
 })
