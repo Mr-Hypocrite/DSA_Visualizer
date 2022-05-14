@@ -1,0 +1,151 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+/* common */
+
+* {
+    background-color: rgb(52,58, 64);
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+li {
+    list-style-type: disc;
+    margin: 0 20px;
+}
+
+h1, h2 {
+    font-weight: 900;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+p, li {
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+/* info section */
+
+.diagram {
+    display: block;
+    margin: 0 auto;
+    width: 70% ;
+}
+
+.array {
+    display: block;
+    margin: 0 auto;
+    width: 40% ;
+}
+
+.linkedl {
+    display: block;
+    margin: 0 auto;
+    width: 60% ;
+}
+
+.stack {
+    display: block;
+    margin: 0 auto;
+    width: 60% ;
+}
+
+.queue {
+    display: block;
+    margin: 0 auto;
+    width: 70% ;
+}
+
+.tree {
+    display: block;
+    margin: 0 auto;
+    width: 70% ;
+}
+
+.graph {
+    display: block;
+    margin: 0 auto;
+    width: 60% ;
+}
+
+
+/* tablet */
+
+@media only screen and (max-width: 900px) {
+    h1, h2 {
+        font-size: 23px;
+    }
+    p, li {
+        font-size: 18px;
+    }
+    .algo .grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    .diagram {
+        width: 100%;
+    }
+    .array {
+        width: 80%;
+    }
+    .linkedl {
+        width: 90%;
+    }
+    .stack {
+        width: 80%;
+    }
+    .queue {
+        width: 90%;
+    }
+    .tree {
+        width: 80%;
+    }
+    .graph {
+        width: 90%;
+    }
+}
+
+/* mobile */
+
+@media only screen and (max-width: 550px) {
+    h1, h2 {
+        font-size: 18px;
+    }
+    p, li {
+        font-size: 10px;
+        padding: 0;
+    }
+}
