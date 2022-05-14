@@ -187,8 +187,15 @@ document.querySelector(`.popFunc`).addEventListener(`click`, () => {
 })
 
 document.querySelector(`.pushFunc`).addEventListener(`click`, () => {
-    Array-Functions
-    pushFunc()
+    switch (ds) {
+        case `Stack`: pushStackFunc()
+            break;
+        case `Queue`: pushQueueFunc()
+            break;
+    
+        default:
+            break;
+    }
 })
 
 const search = () => {
@@ -200,8 +207,8 @@ const search = () => {
         {
            
             if(dataSet[i]==srchData){
-            element[i+1].style.backgroundColor = "green";
-            flag=1
+                element[i+1].style.backgroundColor = "green";
+                flag=1
             }
         }
     
@@ -284,14 +291,4 @@ const insert = () =>{
 
 document.querySelector(`.insert`).addEventListener(`click`, () => {
     insert()
-})
-    switch (ds) {
-        case `Stack`: pushStackFunc()
-            break;
-        case `Queue`: pushQueueFunc()
-            break;
-    
-        default:
-            break;
-    }
 })

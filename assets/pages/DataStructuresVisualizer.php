@@ -45,7 +45,7 @@
 
             <button class='btn pushFunc'>Push</button>
 
-            <button class='popFunc'>Pop</button>
+            <!-- <button class='popFunc'>Pop</button> -->
 
             <input class='data' type="text" placeholder="Element">
             <input class='index' type="text" placeholder="Index">
