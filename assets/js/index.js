@@ -5,6 +5,7 @@ let outerContainer = document.querySelector(`.center`)
 let width, noOfBars, padding
 let arraySize = document.querySelector(`#number`)
 let sortBtns = Array.from(document.getElementsByClassName('sort-btn'))
+let gArray = []
 
 screenWidth > 1024 ? width = (screenWidth * 0.8) / 50 : width = (screenWidth * 0.6) / 50
 
@@ -13,13 +14,13 @@ screenWidth > 1024 ? width = (screenWidth * 0.8) / 50 : width = (screenWidth * 0
 arraySize.addEventListener(`input`, () => {
 	noOfBars = parseInt(arraySize.value)
 	screenWidth > 1024 ? width = (screenWidth * 0.8) / arraySize.value : width = (screenWidth * 0.6) / arraySize.value
-	console.log(screenWidth, width, arraySize.value)
     removeBars()
 	generatearray(parseInt(arraySize.value))
 });
 
 //Function to generate random arrays and display them
 const generatearray = (noOfBars = 50) => {
+	gArray = []
 
 	for (let i = 0; i < noOfBars; i++)
 	{
@@ -35,6 +36,7 @@ const generatearray = (noOfBars = 50) => {
 
 		array.style.transform = `translate(${i * width}px)`
 		padding = (screenWidth - (noOfBars * (width + 2))) / 2
+		gArray.push(value)
 		container.appendChild(array)
 		document.querySelector(`.center`).style.padding = `0 ${ padding }px`
 	}

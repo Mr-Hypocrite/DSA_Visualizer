@@ -1,70 +1,62 @@
-const partition = async (ele, l, r) => {
-    let i = l - 1;
-    // Styling pivot element
-    ele[r].style.background = 'red';
-    for(let j = l; j <= r - 1; j++){
-        //Styling current element
-        ele[j].style.background = 'cyan';
-        await sleep(delay);
+let quickBtn = document.getElementById(`quick`)
 
-        if(parseInt(ele[j].style.height) < parseInt(ele[r].style.height)){
-            i++;
-            swap(ele[i], ele[j]);
-            // Styling 
-            ele[i].style.background = 'orange';
-            if(i != j) ele[j].style.background = 'orange';
-            await sleep(delay);
-        }
-        else{
-            // Styling if not less than pivot
-            ele[j].style.background = 'pink';
-        }
-    }
-    i++; 
-    await sleep(delay);
-    swap(ele[i], ele[r]);
-    // Styling
-    ele[r].style.background = 'pink';
-    ele[i].style.background = 'green';
+const partition = (arr, low, high) => {
+    let pivot = arr[low].style.height
 
+    let i = low, j = high;
+
+    try {
+        while (i < j && i < arr.length -1) {
+            do {
+                i++
+                console.log(i)
+            } while (arr[i].style.height <= pivot)
+            do {
+                j--
+            } while (arr[j].style.height > pivot)
+            if (i < j) {
+                swap(arr[i], arr[j])
+            }
     
-    // Styling
-    for(let k = 0; k < ele.length; k++){
-        if(ele[k].style.background != 'green')
-            ele[k].style.background = 'cyan';
+        }
+        swap(arr[low], arr[j])
+        return j;
+    } catch (e) {
+        console.log(e)
     }
-
-    return i;
+    
 }
 
-const quick = async (ele, l, r) => {
-    console.log("quick")
+const quickSort = (arr, low, high) => {
+    if (low < high) {
+        let pi = partition(arr, low, high)
+        quickSort(arr, low, pi)
+        quickSort(arr, pi + 1, high)
+    }
+}
+
+const quick = () => {
+
+    let ele = document.querySelectorAll(`.block`)
 
     sortBtns.forEach(element => {
         element.disabled = true
     })
-    
-    if(l < r){
-        let pivot_index = await partition(ele, l, r);
-        await quick(ele, l, pivot_index - 1);
-        await quick(ele, pivot_index + 1, r);
-    }
-    else{
-        if(l >= 0 && r >= 0 && l <ele.length && r <ele.length){
-            ele[r].style.background = 'green';
-            ele[l].style.background = 'green';
-        }
+
+    quickBtn.classList.add(`active-btn`)
+
+    if (ele !== null) {
+        quickSort(ele, 0, ele.length - 1)
     }
 
     sortBtns.forEach(element => {
         element.disabled = false
-        
     })
+    
+    quickBtn.classList.remove(`active-btn`)
+
 }
 
-document.getElementById(`quick`).addEventListener(`click`, () => {
-    let ele = document.querySelectorAll('.block');
-    let l = 0;
-    let r = ele.length - 1;
-    quick(ele, l, r);
+quickBtn.addEventListener('click', () => {
+    quick()
 })
