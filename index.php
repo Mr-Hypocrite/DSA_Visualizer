@@ -41,6 +41,7 @@
             <script src="./assets/js/index.js"></script>
             <script src="./assets/js/Sorting/bubbleSort.js"></script>
             <script src="./assets/js/Sorting/insertionSort.js"></script>
+            <script src="./assets/js/Sorting/quickSort.js"></script>
 
     </body>
 </html>
