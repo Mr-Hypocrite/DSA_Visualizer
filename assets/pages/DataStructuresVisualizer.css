@@ -271,7 +271,9 @@ input::placeholder {
     margin: auto;
     text-align: center;
 }
-
+.moreInfo {
+    color: white;
+}
 
 /* ID's */
 #DSContainer {

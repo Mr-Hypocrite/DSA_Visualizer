@@ -144,6 +144,7 @@ window.onload = () => {
     createDataSet()
     createArray()
     document.querySelector(`.currentDs`).innerText = `Selected Data Structure: Array`
+    document.querySelector(`.moreInfo`).href = `array.php`
 }
 
 document.getElementById(`ds`).addEventListener(`input`,(e) => {
@@ -176,24 +177,25 @@ const callCurrentDS = () => {
     switch (ds) {
         case `Array`: createArray()
                         showALOperations()
+                        document.querySelector(`.moreInfo`).href = `array.php`
             break;
 
         case `LinkedList`: createLL()
                             showALOperations()
+                            document.querySelector(`.moreInfo`).href = `linkedList.php`
+
             break;
 
         case `Stack`: createStack()
-                        showSQOperations()                    
+                        showSQOperations()
+                        document.querySelector(`.moreInfo`).href = `stack.php`
+
             break;
 
         case `Queue`: createQueue()
-                        showSQOperations() 
-            break;
-    
-        case `Tree`: createTree()
-            break;
+                        showSQOperations()
+                        document.querySelector(`.moreInfo`).href = `queue.php`
 
-        case `Graph`: createGraph()
             break;
 
         default:

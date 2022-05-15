@@ -23,7 +23,7 @@
 
     <div class='nav__bar'>
         <a href="../../index.php" class="nav-logo" >
-            <img src="../../assets/images/logo.png" alt="logo" width="40rem">
+            <img src="../../assets/images/logo.png" alt="logo" class="nav-logo">
         </a>
         <a href="../../assets/pages/DataStructuresVisualizer.php">
             <h3 class="nav-ele">DS Visualizer</h3>
@@ -31,6 +31,18 @@
         <a href="../../index.php">
             <h3 class="nav-ele">Algo Visualizer</h3>
         </a>
+
+        <h3 class="dropdown">
+            DS Info
+            <div class="drop-ele">
+                <a href="../../assets/pages/dsa.php">Data Structures and Algo Overview</a>
+                <a href="../../assets/pages/dstypes.php">Data Structure Types</a>
+                <a href="../../assets/pages/array.php">Array</a>
+                <a href="../../assets/pages/linkedList.php">Linked List</a>
+                <a href="../../assets/pages/stack.php">Stack</a>
+                <a href="../../assets/pages/queue.php">Queue</a>
+            </div>
+        </h3>
     </div>
 </body>
 </html>
