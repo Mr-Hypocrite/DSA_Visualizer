@@ -22,11 +22,14 @@
     ?>
 
     <div class='nav__bar'>
+        <a href="../../index.php" class="nav-logo" >
+            <img src="../../assets/images/logo.png" alt="logo" width="40rem">
+        </a>
         <a href="../../assets/pages/DataStructuresVisualizer.php">
-            <h3>Data Structures</h3>
+            <h3 class="nav-ele">DS Visualizer</h3>
         </a>
         <a href="../../index.php">
-            <h3>Algorithms</h3>
+            <h3 class="nav-ele">Algo Visualizer</h3>
         </a>
     </div>
 </body>

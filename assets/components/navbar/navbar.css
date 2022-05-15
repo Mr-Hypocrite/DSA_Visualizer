@@ -1,8 +1,32 @@
 .nav__bar {
+    background-color: rgba(255, 255, 255, 0.1);
     color: white;
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
+    padding: 1rem;
     align-items: center;
     font-size: 1rem;
+}
+
+.nav-logo {
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-ele {
+    color: black;
+    background-color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    transition: all ease-in-out 0.3s;
+}
+
+.nav-ele:hover {
+    background-color: black;
+    color: white;
+    transform: translateY(-3px);
 }

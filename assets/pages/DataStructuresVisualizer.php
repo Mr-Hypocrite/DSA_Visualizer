@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon">
     <title>DSA Visualizer</title>
     <link rel="stylesheet" href="./DataStructuresVisualizer.css">
 </head>
@@ -31,33 +31,35 @@
             <option value="LinkedList">LinkedList</option>
             <option value="Stack">Stack</option>
             <option value="Queue">Queue</option>
-            <option value="Tree">Tree</option>
-            <option value="Graph">Graph</option>
         </select>
 
     </div>
 
     <div class="DsOptionPane">
-            <div class='flex'>
-                <h3>Data:</h3>
-                <input class='newData' type="text">
+            <div class="flex stackQOperations">
+                <button class='btn pushFunc'>Push</button>
+                <input class='newData' type="text" placeholder="Data">
+                <button class='btn popFunc'>Pop</button>
             </div>
 
-            <button class='btn pushFunc'>Push</button>
+            <div class="arrOperations">
+                <div class="flex">
+                    <input class='data' type="text" value="" placeholder="Element">
+                    <input class='index' type="text" value="" placeholder="Index">
+                    <button class='btn insert'>Insert</button>
+                </div>
 
-            <!-- <button class='popFunc'>Pop</button> -->
+                <div class="flex">
+                    <input class='rmvData' type="text" placeholder="Index">
+                    <button class='btn remove'>Remove</button>    
+                </div>
 
-            <input class='data' type="text" placeholder="Element">
-            <input class='index' type="text" placeholder="Index">
-            <button class='insert'>Insert:</button>
-
-            <input class='rmvData' type="text">
-            <button class='remove'>Remove:</button>
-
-            <input class='srchData' type="text">
-            <button class='search'>Search:</button>
-
-            <button class='btn popFunc'>Pop</button>
+                <div class="flex">
+                    <input class='srchData' type="text" value="" placeholder="Element">
+                    <button class='btn search'>Search</button>                    
+                </div>
+                
+            </div>
             
     </div>  
 
@@ -67,6 +69,14 @@
 
         </div>
         
+    </div>
+
+    <div class="info">
+        <h1>Info</h1>
+        <h3 class="currentDs"></h3>
+        <h3 class="insertionInfo"></h3>
+        <h3 class="removeInfo"></h3>
+        <a href="" class="moreInfo"><h3>Click for More Info...</h3></a>
     </div>
 
     <script src="./DSVisualizer.js"></script>
