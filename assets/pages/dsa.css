@@ -1,19 +1,26 @@
 /* font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Nunito:wght@200;300&display=swap');/* common */
 
 /* common */
 
 * {
-    background-color: rgb(52,58, 64);
     color: white;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
     padding: 0;
     margin: 0;
 }
 
+body {
+    background-image: url(../images/finalbg.png);
+    background-image: url(../images/finalbg.png), linear-gradient(to bottom right, #1F1D36 , #E9A6A6);
+    background-size: contain;
+    background-repeat: round;
+}
+
 .container {
-    max-width: 1300px;
+    background-color: rgb(22, 21, 21);
+    max-width: 1000px;
     margin: 0 auto;
     overflow: auto;
     padding: 0 40px;
@@ -91,6 +98,19 @@ img {
     width: 30%;
 }
 
+
+/* id */
+
+/* Container Border */
+#container {
+    border: 0.5px solid white;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    }
+
+
+
 /* tablet */
 
 @media only screen and (max-width: 900px) {
@@ -98,7 +118,7 @@ img {
         font-size: 23px;
     }
     p, li {
-        font-size: 18px;
+        font-size: 20px;
     }
     .algo .grid {
         grid-template-columns: 1fr;
@@ -122,7 +142,7 @@ img {
         font-size: 18px;
     }
     p, li {
-        font-size: 10px;
+        font-size: 15px;
         padding: 0;
     }
     .need img {
