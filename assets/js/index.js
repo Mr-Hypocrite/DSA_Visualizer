@@ -48,6 +48,33 @@ const generatearray = (noOfBars = 50) => {
 
 // Generating Array on Load
 window.onload = () => {
+	
+	let remove= document.getElementById("remove")
+	
+	document.getElementById('title').innerHTML="LEGEND"
+	
+	let yellow= document.createElement(`li`)
+	yellow.classList.add("yellow")
+	yellow.innerHTML="&nbsp"
+
+	let blue= document.createElement(`li`)
+	blue.classList.add("blue")
+	blue.innerHTML="&nbsp"
+
+	let grey= document.createElement(`li`)
+	grey.classList.add("grey")
+	grey.innerHTML="&nbsp"
+
+	let cyan= document.createElement(`li`)
+	cyan.classList.add("cyan")
+	cyan.innerHTML="&nbsp"
+
+	let green= document.createElement(`li`)
+	green.classList.add("green")
+	green.innerHTML="&nbsp"
+	
+	remove.append(yellow,blue,cyan,grey,green)
+
 	generatearray()
 }
 
@@ -93,3 +120,126 @@ delayTime.addEventListener(`input`, () => {
 const disablebtn = () => {
 	document.getElementById('bubble').disabled = true
 }
+
+
+document.getElementById("menu").addEventListener("click",() => {
+	document.getElementById("sidebar").classList.toggle("active")
+	document.getElementById("menu").classList.toggle("openmenu")
+
+})
+const info = () => {
+    let list= document.getElementById("list")
+    let remove= document.getElementById("remove")
+    remove.remove()
+	
+    let yellow= document.createElement(`li`)
+	yellow.classList.add("yellow")
+	yellow.innerHTML="Unsorted Elements"
+
+    let blue= document.createElement(`li`)
+    blue.classList.add("blue")
+	blue.innerHTML="Selected Elements"
+
+    let grey= document.createElement(`li`)
+    grey.classList.add("grey")
+	grey.innerHTML="Compared Elements"
+
+    let cyan= document.createElement(`li`)
+    cyan.classList.add("cyan")
+	cyan.innerHTML=" Swapped Elements"
+
+    let green= document.createElement(`li`)
+    green.classList.add("green")
+	green.innerHTML="Sorted Elements"
+	
+    list.append(yellow,blue,grey,cyan,green)
+
+} 
+
+document.getElementById(`bubble`).addEventListener(`click`, () => {
+	document.getElementById('title').innerHTML="Bubble Sort"
+	 info() 
+	})
+
+document.getElementById(`select`).addEventListener(`click`, () => {
+	document.getElementById('title').innerHTML="Selection Sort"
+	 info() 
+	})
+
+document.getElementById(`insert`).addEventListener(`click`, () => {
+		document.getElementById('title').innerHTML="Insertion Sort"
+		 info() 
+		})
+document.getElementById(`quick`).addEventListener(`click`, () => {
+			document.getElementById('title').innerHTML="Quick Sort"
+			let list= document.getElementById("list")
+			let remove= document.getElementById("remove")
+			remove.remove()
+			
+			let yellow= document.createElement(`li`)
+			yellow.classList.add("yellow")
+			yellow.innerHTML="Unsorted Elements"
+		
+			let red= document.createElement(`li`)
+			red.classList.add("red")
+			red.innerHTML="Pivot Element"
+
+			let orange= document.createElement(`li`)
+			orange.classList.add("orange")
+			orange.innerHTML="Lesser than Pivot"
+		
+			let pink= document.createElement(`li`)
+			pink.classList.add("grey")
+			pink.innerHTML="Greater than Pivot"
+		
+			let cyan= document.createElement(`li`)
+			cyan.classList.add("cyan")
+			cyan.innerHTML="Current Element"
+		
+			let green= document.createElement(`li`)
+			green.classList.add("green")
+			green.innerHTML="Sorted Elements"
+			
+			list.append(yellow,red,orange,pink,cyan,green)
+		
+			})
+		document.getElementById(`insert`).addEventListener(`click`, () => {
+				document.getElementById('title').innerHTML="Insertion Sort"
+				 info() 
+				})
+
+		document.getElementById(`merge`).addEventListener(`click`, () => {
+			
+			document.getElementById('title').innerHTML="Merge Sort"
+			
+			let list= document.getElementById("list")
+			let remove= document.getElementById("remove")
+			remove.remove()
+			
+			let yellow= document.createElement(`li`)
+			yellow.classList.add("yellow")
+			yellow.innerHTML="Unsorted Elements"
+		
+			let red= document.createElement(`li`)
+			red.classList.add("red")
+			red.innerHTML="Pivot Element"
+
+			let orange= document.createElement(`li`)
+			orange.classList.add("orange")
+			orange.innerHTML="Lesser than Pivot"
+		
+			let pink= document.createElement(`li`)
+			pink.classList.add("grey")
+			pink.innerHTML="Greater than Pivot"
+		
+			let cyan= document.createElement(`li`)
+			cyan.classList.add("cyan")
+			cyan.innerHTML="Current Element"
+		
+			let green= document.createElement(`li`)
+			green.classList.add("green")
+			green.innerHTML="Sorted Elements"
+			
+			list.append(yellow,red,orange,pink,cyan,green)
+		
+			})
