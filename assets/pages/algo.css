@@ -1,0 +1,31 @@
+li{
+    list-style-type:decimal;
+}
+
+img{
+    width: auto;
+}
+
+.img1{
+    
+    width:auto;
+}
+
+.info1{
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+}
+
+.i1,.i2{
+    display: block;
+    margin: 0 auto;
+}
+
+.i1{
+    width: 45%;
+}
+
+.i2{
+    width: 60%;
+}

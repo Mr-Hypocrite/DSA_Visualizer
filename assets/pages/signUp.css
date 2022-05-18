@@ -1,9 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+body{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+a{
+    color: white;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
 .signUp__div {
+    color: white;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
@@ -23,9 +59,12 @@
 }
 
 .signUp__div input {
+    background-color: transparent;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 2.5px solid white;
+    color: white;
     display: inline-block;
+    margin-bottom: 0.5rem;
     font-size: 1.5rem;
     width: 100%;
     padding: 2px;
@@ -39,4 +78,54 @@
     display: flex;
     gap: 2rem;
     margin: 0 auto;
+}
+
+.c_btn {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+.c_btn:hover {
+    background-color: white;
+    color: black;;
+}
+
+.dsa_logo {
+    width: 5rem;
+    margin: 0 auto;
+}
+
+.msgBox {
+    align-items: center;
+    background-color: red;
+    color: white;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+    justify-content: center;
+    width: 100%;
+    height: 4rem;
+    animation: slideIn 5s ease-in-out;
+    position: absolute;
+    top: -4rem;
+}
+
+.green {
+    background-color: greenyellow;
+}
+
+@keyframes slideIn {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+        transform: translateY(4rem);
+	}
+	100% {
+        transform: translateY(0);
+	}
 }
