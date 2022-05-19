@@ -46,6 +46,7 @@
             <script src="../../assets/js/Sorting/insertionSort.js"></script>
             <script src="../../assets/js/Sorting/quickSort.js"></script>
             <script src="../../assets/js/Sorting/selectionSort.js"></script>
+            <script src="../../assets/js/Sorting/mergeSort.js"></script>
 
 
     </body>

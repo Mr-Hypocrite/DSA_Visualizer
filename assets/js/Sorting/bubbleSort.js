@@ -6,8 +6,6 @@ const bubble = async () => {
         element.disabled = true
     })
 
-    bubbleBtn.classList.add(`active-btn`)
-
     const ele = document.querySelectorAll(`.block`)
 
     for (let i = 0; i < ele.length-1; i++) {
@@ -36,8 +34,6 @@ const bubble = async () => {
     sortBtns.forEach(element => {
         element.disabled = false
     })
-    
-    bubbleBtn.classList.remove(`active-btn`)
 
 }
 
