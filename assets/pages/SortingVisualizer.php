@@ -40,6 +40,17 @@
             <div class="center">
                 <div id="array"></div>
             </div>
+            <div id="sidebar" > 
+            <div id="list">
+                <h1 id="title"></h1>
+                <div id="item"></div>
+            </div>
+                <div id="menu" class="menu">
+                    <span class="line1"></span>
+                    <span class="line2"></span>
+                    <span class="line3"></span>
+                </div>
+            </div>
 
             <script src="../../assets/js/index.js"></script>
             <script src="../../assets/js/Sorting/bubbleSort.js"></script>

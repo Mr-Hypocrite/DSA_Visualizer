@@ -89,6 +89,35 @@ async function mergeSort(ele, l, r){
 const mergeSortbtn = document.getElementById("merge");
 
 mergeSortbtn.addEventListener('click', async function(){
+    
+     	
+	document.getElementById('title').innerHTML="Merge Sort"
+
+	let item= document.getElementById("item")
+	item.innerHTML=''
+
+	let yellow= document.createElement(`li`)
+	yellow.style.background='yellow'
+	yellow.innerHTML="Unsorted Elements"
+
+    let blue= document.createElement(`li`)
+	blue.style.background='blue'
+	blue.innerHTML="Elements of the left Half"
+
+    let red= document.createElement(`li`)
+	red.style.background='red'
+	red.innerHTML="Elements of the right Half"
+	
+	let pink= document.createElement(`li`)
+	pink.style.background='pink'
+	pink.innerHTML="Sorted Halves"
+	
+	let green= document.createElement(`li`)
+	green.style.background='green'
+	green.innerHTML="Sorted Elements"
+	item.append(yellow,blue,red,pink,green)
+
+
     sortBtns.forEach(element => {
         element.disabled = true
     })

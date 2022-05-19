@@ -63,6 +63,38 @@ const quick = async (ele, l, r) => {
 }
 
 document.getElementById(`quick`).addEventListener(`click`, () => {
+    
+    document.getElementById('title').innerHTML="Quick Sort"
+	let item= document.getElementById("item")
+	item.innerHTML=''
+			
+	let yellow= document.createElement(`li`)
+	yellow.style.background='yellow'
+	yellow.innerHTML="Unsorted Elements"
+		
+	let red= document.createElement(`li`)
+	red.style.background='red'
+	red.innerHTML="Pivot Element"
+
+	let orange= document.createElement(`li`)
+	orange.style.background='orange'
+	orange.innerHTML="Lesser than Pivot"
+		
+	let pink= document.createElement(`li`)
+	pink.style.background='pink'
+	pink.innerHTML="Greater than Pivot"
+		
+	let cyan= document.createElement(`li`)
+	cyan.style.background='cyan'
+	cyan.innerHTML="Current Element"
+		
+	let green= document.createElement(`li`)
+	green.style.background='green'
+	green.innerHTML="Sorted Elements"
+			
+	item.append(yellow,red,orange,pink,cyan,green)
+
+
     let ele = document.querySelectorAll('.block');
     let l = 0;
     let r = ele.length - 1;

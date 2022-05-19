@@ -21,4 +21,8 @@ const select = async () => {
     }
     ele[ele.length-1].style.background = `green`;
 }
-document.getElementById(`select`).addEventListener(`click`, () => { select() })
+document.getElementById(`select`).addEventListener(`click`, () => { 
+    document.getElementById('title').innerHTML="Selection Sort"
+    info() 
+
+    select() })

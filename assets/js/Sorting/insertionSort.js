@@ -41,5 +41,8 @@ const insertion = async () => {
 }
 
 document.getElementById(`insert`).addEventListener(`click`, () => {
+    document.getElementById('title').innerHTML="Insertion Sort"
+    info() 
+
     insertion()
 })

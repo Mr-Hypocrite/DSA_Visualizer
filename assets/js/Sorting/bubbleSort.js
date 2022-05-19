@@ -38,5 +38,8 @@ const bubble = async () => {
 }
 
 bubbleBtn.addEventListener(`click`, () => {
+    document.getElementById('title').innerHTML="Bubble Sort"
+    info() 
+
     bubble()
 })

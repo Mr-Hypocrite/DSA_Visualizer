@@ -92,3 +92,84 @@ label{
        flex-direction: column;
    }
 }
+
+
+#sidebar{
+    position: fixed;
+    margin-top:175px;
+    top:0px;
+    padding-top:18px;
+    left:-200px;
+    width: 200px;
+    height:auto;
+    background:rgb(25, 28, 31);
+    opacity: 95%;
+    border-radius: 25px;
+    transition: left 500ms  ;
+}
+#sidebar.active{
+    left: 0px;
+    
+}
+.menu{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top:10px;
+    right: -40px;
+    cursor: pointer;
+}
+.menu span{
+    background:#fff ;
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: transform 0.5s, width 0.5s;
+}
+
+.menu .line1{
+    left:10px;
+    width:20px;
+    transform: translate(-50%,-20px);
+}
+.menu .line3{
+    left: 30px;
+    width:20px;
+    transform: translate(-50%,15px);
+}
+
+.openmenu .line1{
+    left: 20px;
+    width: 40px;
+    transform: translate(-50%,-50%)rotate(-45deg);
+}
+.openmenu .line3{
+    left: 20px;
+    width: 40px;
+    transform: translate(-50%,-50%)rotate(45deg);
+}
+
+.openmenu .line2{
+    width: 0%;
+}
+
+#list{
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(24, 24, 24);
+    font-size: 15px;
+    font-weight:bold;
+    list-style: none;
+}
+li{
+    margin: 21px;
+    padding: 6px;
+    border-radius: 25px;
+}
+#title{
+    font-size:28px;
+}

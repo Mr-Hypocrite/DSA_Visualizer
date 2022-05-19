@@ -48,6 +48,7 @@ const generatearray = (noOfBars = 50) => {
 
 // Generating Array on Load
 window.onload = () => {
+	blankinfo()
 	generatearray()
 }
 
@@ -63,6 +64,8 @@ const removeBars = () => {
 document.getElementById(`new`).addEventListener(`click`, () => {
     removeBars()
    	generatearray(arraySize.value)
+	blankinfo()
+
 })
 
 //Function to swap bars
@@ -93,3 +96,69 @@ delayTime.addEventListener(`input`, () => {
 const disablebtn = () => {
 	document.getElementById('bubble').disabled = true
 }
+
+
+
+document.getElementById("menu").addEventListener("click",() => {
+	document.getElementById("sidebar").classList.toggle("active")
+	document.getElementById("menu").classList.toggle("openmenu")
+
+})
+
+const blankinfo=()=>{
+	
+	let item= document.getElementById("item")
+	item.innerHTML=''
+	document.getElementById('title').innerHTML="LEGEND"
+
+	let yellow= document.createElement(`li`)
+	yellow.style.background='yellow'
+	yellow.innerHTML="&nbsp"
+
+	let blue= document.createElement(`li`)
+	blue.style.background='blue'
+	blue.innerHTML="&nbsp"
+
+	let grey= document.createElement(`li`)
+	grey.style.background='#B9F8D3'
+	grey.innerHTML="&nbsp"
+
+	let cyan= document.createElement(`li`)
+	cyan.style.background='cyan'
+	cyan.innerHTML="&nbsp"
+
+	let green= document.createElement(`li`)
+	green.style.background='green'
+	green.innerHTML="&nbsp"
+	
+	item.append(yellow,blue,cyan,grey,green)
+
+}
+
+const info = () => {
+    let item= document.getElementById("item")
+	item.innerHTML=''
+	
+    let yellow= document.createElement(`li`)
+	yellow.style.background='yellow'
+	yellow.innerHTML="Unsorted Elements"
+
+    let blue= document.createElement(`li`)
+	blue.style.background='blue'
+	blue.innerHTML="Selected Elements"
+
+    let grey= document.createElement(`li`)
+	grey.style.background='#B9F8D3'
+	grey.innerHTML="Compared Elements"
+
+    let cyan= document.createElement(`li`)
+	cyan.style.background='cyan'
+	cyan.innerHTML=" Swapped Elements"
+
+    let green= document.createElement(`li`)
+	green.style.background='green'
+	green.innerHTML="Sorted Elements"
+	
+    item.append(yellow,blue,grey,cyan,green)
+
+} 
