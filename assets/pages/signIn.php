@@ -3,7 +3,7 @@
     $login = false;
     $showError = false;
     if($_SERVER["REQUEST_METHOD"] == "POST"){
-        include $dir.'/config/dbConnect.php';
+        include '../../config/dbConnect.php';
         $email = $_POST["email"];
         $password = $_POST["password"];
         $sql = "Select * from users where email='$email'";
