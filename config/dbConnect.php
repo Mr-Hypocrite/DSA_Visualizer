@@ -15,7 +15,7 @@
         $host = $_ENV['host'];
 
         $con = pg_connect("host=". $host .  " port=" . $port . " dbname=" . $database . " user=" . $userName . " password=" . $password . " sslmode=require");
-    } catch (e) {
+    } catch (Error $e) {
         echo "Couldn't connect to the database, Error: $e";
     }
 ?>
