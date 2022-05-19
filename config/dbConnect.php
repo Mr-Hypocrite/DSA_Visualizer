@@ -13,7 +13,7 @@
     $port = $_ENV['port'];
     $host = $_ENV['host'];
 
-    $con = pg_connect("host=". $host .  " port=" . $port . " dbname=" . $database . " user=" . $userName . " password=" . $password);
+    $con = pg_connect("host=". $host .  " port=" . $port . " dbname=" . $database . " user=" . $userName . " password=" . $password . " sslmode=require");
 
     if (!$con) {
         die("Error");
