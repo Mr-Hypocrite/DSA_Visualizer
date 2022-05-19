@@ -54,7 +54,7 @@ a {
 
 .drop-ele {
     align-items: flex-end;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.9);
     border-radius: 12px 0 12px 12px;
     display: none;
     flex-direction: column;
@@ -80,6 +80,6 @@ a {
 }
 
 .drop-ele a:hover {
-    color: black;
+    color: #646FD4;
     transform: translateY(-0.2rem);
 }

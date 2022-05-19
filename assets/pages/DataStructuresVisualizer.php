@@ -31,7 +31,7 @@
             <input type="range" min="1" max="25" value="10" class="slider" id="Size">
         </div>
 
-        <select name="dataStructures" id="ds" class="dsSelector">
+        <select name="dataStructures" id="ds" class="select">
             <option value="Array">Array</option>
             <option value="LinkedList">LinkedList</option>
             <option value="Stack">Stack</option>
