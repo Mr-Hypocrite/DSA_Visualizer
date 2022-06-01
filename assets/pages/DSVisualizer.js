@@ -39,7 +39,7 @@ const createArray = (data = dataSet) => {
 
     for (let i = 0; i < data.length; i++) {
         let ele = document.createElement(`div`)
-        ele.innerHTML = `<h3 class = 'dataInDS'>${ data[i] }</h3> <h6 class = 'baseAdd'>${ 1000 + i }</h6> <h6 class = 'arrIndex'>${ i }</h6>`
+        ele.innerHTML = `<h3 class = 'dataInDS'>${ data[i] }</h3> <h6 class = 'baseAdd'>${ 1000 + (i * 2) }</h6> <h6 class = 'arrIndex'>${ i }</h6>`
         ele.classList.add(`arrayElement`)
         ele.classList.add(`arrayElements`)
         arrayContainer.appendChild(ele)
