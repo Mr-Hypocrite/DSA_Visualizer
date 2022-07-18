@@ -1,5 +1,5 @@
 <?php
-    include '../../scripts/checkSession.php';
+    // include '../../scripts/checkSession.php';
 ?>
 
 <!DOCTYPE html>

@@ -12,7 +12,7 @@
 
         <?php 
         
-            include 'scripts/checkSession.php';
+            // include 'scripts/checkSession.php';
             
             include 'assets/pages/SortingVisualizer.php';
         

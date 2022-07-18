@@ -57,7 +57,7 @@
             </div>
         </h3>
 
-        <a href="/assets/pages/logout.php"><h3 class="nav-ele">Log Out</h3></a>
+        <!-- <a href="/assets/pages/logout.php"><h3 class="nav-ele">Log Out</h3></a> -->
     </div>
 </body>
 </html>
